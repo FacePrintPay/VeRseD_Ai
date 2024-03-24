@@ -1,0 +1,391 @@
+[2024-03-24T09:37:00.000067875Z][init][I] set time from real time clock: 2024-03-24 09:37:00 +0000 UTC
+[2024-03-24T09:37:00.413809461Z][init][I] logging to both the host and the console
+[2024-03-24T09:37:00.414165497Z][init.socketforward][I] adding listener for virtual address: debug-socketforwarder
+[2024-03-24T09:37:00.414227210Z][init.socketforward][I] adding listener for virtual address: perf-socketforwarder
+[2024-03-24T09:37:00.755232551Z][init][I] platform has a virtio-net eth0 so no need for a TAP AF_VSOCK
+[2024-03-24T09:37:00.755648491Z][init][I] listening on TCP port 5555 for internal Docker Hub proxy
+[2024-03-24T09:37:00.755730702Z][init][I] listening on TCP port 3128 for internal HTTP proxy
+[2024-03-24T09:37:00.756063772Z][init.socketforward][I] adding listener for virtual address: control-init
+[2024-03-24T09:37:00.756674291Z][init][I] Loading module: /lib/modules/fakeowner.ko
+[2024-03-24T09:37:01.258863489Z][init][I] starting debug service
+[2024-03-24T09:37:01.259003120Z][init][I] starting performance service
+[2024-03-24T09:37:01.259282718Z][init.socketforward][I] connecting to AF_VSOCK connect://2/1999
+[2024-03-24T09:37:01.259397391Z][init.ipc][I] ipc.NewClient: fa1ca60d-pause/unpause ->  
+[2024-03-24T09:37:01.262353908Z][init][I] cgroupv2 detected in /sys/fs/cgroup
+[2024-03-24T09:37:01.262811441Z][init.ipc][I] run (with context) ba1ecad1-procd for component procd on /run/guest-services/procd.sock
+[2024-03-24T09:37:01.259633324Z][init][I] eth0: adding IP 192.168.65.3/24
+[2024-03-24T09:37:01.263287403Z][init][I] eth0: adding router 192.168.65.1
+[2024-03-24T09:37:01.263387455Z][init][I] eth0: adding default route via 192.168.65.1
+[2024-03-24T09:37:01.263663540Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:01.259653407Z][init][I] QEMU arm registered
+[2024-03-24T09:37:01.266424413Z][init][I] QEMU mips64 registered
+[2024-03-24T09:37:01.259731620Z][init.ipc][I] ipc.NewClient: bdbbf127-metadata ->  
+[2024-03-24T09:37:01.268259369Z][init.ipc][I] (fb78b89a) bdbbf127-metadata C->S  GET /vm/init
+[2024-03-24T09:37:01.585208075Z][init][I] QEMU mips64le registered
+[2024-03-24T09:37:01.602252907Z][init.socketforward][I] connected to connect://2/1999
+[2024-03-24T09:37:01.835959076Z][init][I] QEMU ppc64le registered
+[2024-03-24T09:37:01.836169029Z][init][I] QEMU riscv64 registered
+[2024-03-24T09:37:02.122223082Z][init][I] QEMU s390x registered
+[2024-03-24T09:37:02.124102263Z][init.metadata][I] writing metadata to /run/config
+[2024-03-24T09:37:02.126052222Z][init.socketforward][I] starting to forward dials
+[2024-03-24T09:37:02.126279382Z][init.socketforward][I] engine: vpnkit: publishing locally on /run/host-services/vpnkit.sock
+[2024-03-24T09:37:02.126654544Z][init.socketforward][I] engine: http-proxy-restricted: publishing locally on /run/host-services/http-proxy-restricted.sock
+[2024-03-24T09:37:02.126772658Z][init.socketforward][I] engine: ntp: publishing locally on /run/host-services/ntp.udp.sock
+[2024-03-24T09:37:02.126984760Z][init.socketforward][I] engine: dns.internal/grpc: publishing locally on /run/host-services/dns.internal.grpc.sock
+[2024-03-24T09:37:02.127112199Z][init.socketforward][I] engine: network-proxy: publishing locally on /run/host-services/network-proxy.sock
+[2024-03-24T09:37:02.127236727Z][init.socketforward][I] engine: osxfs-data: publishing locally on /run/host-services/osxfs-data.sock
+[2024-03-24T09:37:02.127305311Z][init.socketforward][I] engine: ssh-auth: publishing locally on /run/host-services/ssh-auth.sock
+[2024-03-24T09:37:02.127436646Z][init.socketforward][I] engine: vpnkit-data: publishing locally on /run/host-services/vpnkit-data.sock
+[2024-03-24T09:37:02.127531947Z][init.socketforward][I] engine: backend: publishing locally on /run/host-services/backend.sock
+[2024-03-24T09:37:02.127688762Z][init.socketforward][I] engine: backend-native: publishing locally on /run/host-services/backend.native.sock
+[2024-03-24T09:37:02.127871771Z][init.socketforward][I] engine: dns.system/grpc: publishing locally on /run/host-services/dns.system.grpc.sock
+[2024-03-24T09:37:02.128003479Z][init.socketforward][I] engine: extensions: publishing locally on /run/host-services/extension-manager.sock
+[2024-03-24T09:37:02.128160727Z][init.socketforward][I] engine: gvisor: publishing locally on /run/host-services/gvisor-ethernet-vpnkit-protocol.sock
+[2024-03-24T09:37:02.128266722Z][init.socketforward][I] engine: hubproxy: publishing locally on /run/host-services/hubproxy.sock
+[2024-03-24T09:37:02.128410242Z][init.socketforward][I] engine: docker-proxy: publishing locally on /run/host-services/docker.proxy.sock
+[2024-03-24T09:37:02.128553709Z][init.socketforward][I] engine: filesystem: publishing locally on /run/host-services/filesystem.sock
+[2024-03-24T09:37:02.128652150Z][init.socketforward][I] engine: http-proxy: publishing locally on /run/host-services/http-proxy.sock
+[2024-03-24T09:37:02.133232200Z][init.dns][I] eBPF loaded
+[2024-03-24T09:37:02.133398234Z][init.dns][I] pinned IP allowlist map to /sys/fs/bpf/allowed_map
+[2024-03-24T09:37:02.133459006Z][init.dns][I] pinned IP blocked_packets map to /sys/fs/bpf/blocked_packets
+[2024-03-24T09:37:02.133536488Z][init.dns][I] pinned IP allowlist trie to /sys/fs/bpf/allowed_trie
+[2024-03-24T09:37:02.133598513Z][init.dns][I] detected cgroup2 on /sys/fs/cgroup
+[2024-03-24T09:37:02.133650982Z][init.dns][I] applying policy to /sys/fs/cgroup/restricted
+[2024-03-24T09:37:02.133723609Z][init.dns][I] created /sys/fs/cgroup/restricted
+[2024-03-24T09:37:02.134242789Z][init.dns][I] attached eBPF to egress of cgroup /sys/fs/cgroup/restricted
+[2024-03-24T09:37:02.134347766Z][init.dns][I] pinned link to /sys/fs/bpf/link/restricted
+[2024-03-24T09:37:02.134408853Z][init.dns][I] detected cgroup2 on /sys/fs/cgroup
+[2024-03-24T09:37:02.134450542Z][init.dns][I] applying policy to /sys/fs/cgroup/docker/buildx
+[2024-03-24T09:37:02.134545187Z][init.dns][I] created /sys/fs/cgroup/docker/buildx
+[2024-03-24T09:37:02.134598505Z][init.dns][I] attached eBPF to egress of cgroup /sys/fs/cgroup/docker/buildx
+[2024-03-24T09:37:02.134658375Z][init.dns][I] pinned link to /sys/fs/bpf/link/buildx
+[2024-03-24T09:37:02.135005319Z][init.ipc][I] run (with context) 8e04b813-control for component init on control-init
+[2024-03-24T09:37:02.136222805Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.136377262Z][init.socketforward][I] engine: /run/guest-services/dns-forwarder.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.136499712Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.136548340Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.146487099Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.146489241Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.146574701Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.366247114Z][init][I] Loading module: /lib/modules/grpcfuse.ko
+[2024-03-24T09:37:02.146612828Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.147085982Z][init.ipc][I] ipc.NewClient: fcb9d98a-dns-forwarder ->  
+[2024-03-24T09:37:02.368661080Z][init.ipc][I] (724f0a00) fcb9d98a-dns-forwarder C->S  GET /registry/access
+[2024-03-24T09:37:02.147107960Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:37:02.366297822Z][init][I] QEMU aarch64 registered
+[2024-03-24T09:37:02.371589989Z][init.ipc][I] (724f0a00) fcb9d98a-dns-forwarder C<-S 530435de-BackendAPI GET /registry/access (2.791606ms): {"allowed":[{"DNS":"","IP":{"IP":"0.0.0.0","Mask":"AAAAAA=="},"Type":1,"value":"0.0.0.0/0"},{"DNS":".","IP":{"IP":"","Mask":null},"Type":3,"value":"."},{"DNS":"","IP":{"IP":"10.0.0.0","Mask":"/wAAAA=="},"Type":1,"value":"10.0.0.0/8"},{"DNS":"","IP":{"IP":"172.16.0.0","Mask":"//AAAA=="},"Type":1,"value":"172.16.0.0/12"},{"DNS":"","IP":{"IP":"192.168.0.0","Mask":"//8AAA=="},"Type":1,"value":"192.168.0.0/16"},{"DNS":"","IP":{"IP":"127.0.0.0","Mask":"/wAAAA=="},"Type":1,"value":"127.0.0.0/8"}],"enabled":false,"refresh_after":"0001-01-01T00:00:00Z","refresh_grace_period_ends":"0001-01-01T00:00:00Z","refresh_grace_period_interval":0}
+[2024-03-24T09:37:02.371947760Z][init.socketforward][I] adding listener for virtual address: /run/guest-services/dns-forwarder.sock
+[2024-03-24T09:37:02.696741972Z][init.ipc][I] run (with context) 4f2b9572-dns-forwarder for component dns-forwarder on /run/guest-services/dns-forwarder.sock
+[2024-03-24T09:37:02.833839017Z][init.ipc][I] (fb78b89a) bdbbf127-metadata C<-S 530435de-BackendAPI GET /vm/init (1.565464716s): {"Docker":{"defaultSnapshotter":"stargz","useSnapshotter":true},"Filesharing":{"Address":"unix:/run/host-services/filesystem.sock","HostOS":"darwin","Mode":"osxfs","Osxfs":{"Exports":["/Users","/Volumes","/private","/tmp","/var/folders"],"OsxfsAddress":"u:/run/host-services/osxfs-data.sock","TransfusedAddress":"u:/run/guest-services/transfued.sock"},"OsxfsExports":null,"UserNsIDShift":"bool"},"IsWSL":false,"Kubernetes":{"CNIConf":{"10-default.conflist":"\n\t{\n\t\t\"cniVersion\": \"0.3.1\",\n\t\t\"name\": \"default\",\n\t\t\"plugins\": [\n\t\t\t{\n\t\t\t\"type\": \"bridge\",\n\t\t\t\"bridge\": \"cni0\",\n\t\t\t\"isDefaultGateway\": true,\n\t\t\t\"ipMasq\": true,\n\t\t\t\"hairpinMode\": true,\n\t\t\t\"ipam\": {\n\t\t\t\t\"type\": \"host-local\",\n\t\t\t\t\"subnet\": \"10.1.0.0/16\",\n\t\t\t\t\"gateway\": \"10.1.0.1\"\n\t\t\t},\n\t\t\t\"dns\": {\n\t\t\t\t\"nameservers\": [\"10.1.0.1\"]\n\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\"type\": \"portmap\",\n\t\t\t\"capabilities\": {\n\t\t\t\t\"portMappings\": true\n\t\t\t},\n\t\t\t\"snat\": true\n\t\t\t}\n\t\t]\n\t}\n\t","99-loopback.conf":"\n\t{\n\t\t\"cniVersion\": \"0.2.0\",\n\t\t\"type\": \"loopback\"\n\t}"},"Enabled":false,"ImagesRepository":""},"Network":{"Docker":"192.168.65.3","DockerRoot":"192.168.65.5","Eth0":{"Address":"192.168.65.3/24","Gateway":"192.168.65.1","MTU":65535},"Host":"192.168.65.254","Interfaces":"auto eth0\niface eth0 inet static\n\t\taddress 192.168.65.3\n\t\tnetmask 255.255.255.128\n\t\tgateway 192.168.65.1\n\t\tbroadcast 192.168.65.255","MTU":65535,"ResolvConf":"# DNS requests are forwarded to the host. DHCP DNS options are ignored.\nnameserver 192.168.65.7\n ","Services":"192.168.65.7","ServicesRoot":"192.168.65.6","Type":"gvisor","VpnkitCIDR":"1...4"},"Rosetta":{"enabled":false,"preserveArgv0":false,"singleCore":false},"SOCKSPort":0,"SwapSizeMiB":1024,"Telemetry":{"BackendSocketPath":"/run/host-services/backend.sock","DesktopEnabled":false,"LifecycleServerPath":"/run/guest-services/lifecycle-server.sock","UserID":"8...7"},"Virtualization":{"useVirtualizationFramework":true}}
+[2024-03-24T09:37:02.834191026Z][init][I] host.docker.internal will use eth0
+[2024-03-24T09:37:02.834398444Z][init][I] will route UDP via eth1
+[2024-03-24T09:37:02.834581160Z][init][I] default route for all other traffic is via eth0
+[2024-03-24T09:37:02.835698199Z][init][I] metadata is ready
+
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""___/ ===
+          {                       /  ===-
+           ______ O           __/
+                          __/
+              ___________/
+
+docker-desktop login: root (automatic login)
+
+System services are namespaced; to access, use `nsenter -a -t <pid>`
+login[139]: root login on 'hvc0'
+[2024-03-24T09:37:03.267138366Z][init][I] Loading module: /lib/modules/rosetta.ko
+docker-desktop:~# [6n[2024-03-24T09:37:03.924822860Z][init.disk][I] /dev/vda has content. blkid returned: /dev/vda: PTUUID="4137fbc4" PTTYPE="dos"
+[2024-03-24T09:37:03.925009775Z][init.disk][I] no disks require formatting
+[2024-03-24T09:37:03.947944972Z][init][I] Loading module: /lib/modules/shiftfs.ko
+[2024-03-24T09:37:05.124143159Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:06.125100351Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:07.286756447Z][init.disk][I] performing an initial fsck of ext4 /dev/vda1
+[2024-03-24T09:37:09.135231749Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:10.136107020Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:10.757141185Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:37:10.757194719Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:37:13.153163075Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:14.153971632Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:17.171354151Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:18.171878190Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:20.759293483Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:37:20.759349110Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:37:21.184241893Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:22.185144761Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:25.194013067Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:26.195008609Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:29.212334120Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:30.213163140Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:30.761218720Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:37:30.761267220Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:37:33.222088126Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:34.223127568Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:37.232338669Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:38.233131872Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:40.762268896Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:37:40.762367562Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:37:41.243163177Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:42.244221309Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:45.250049776Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:46.250864239Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:49.264258958Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:50.265197477Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:50.763273643Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:37:50.763371534Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:37:53.271111532Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:54.272172977Z][init][I] eth1: DHCPv4
+[2024-03-24T09:37:57.281314067Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:37:58.282236895Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:00.764209533Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:38:00.764320350Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:38:01.292076147Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:02.293148551Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:05.312188394Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:06.313230692Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:09.323022235Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:10.324046544Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:10.764977842Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:38:10.765029744Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:38:13.333114412Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:14.334210782Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:17.338967320Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:18.339671180Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:20.766012671Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:38:20.766094113Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:38:21.350156135Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:22.351106324Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:25.365186233Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:26.365907157Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:29.371055671Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:30.372040185Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:30.768224829Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:38:30.768320197Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:38:33.386032361Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:34.387047662Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:37.416428008Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:38.432971007Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:40.769079738Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:38:40.769093017Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:38:41.442127305Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:42.442986790Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:45.454305628Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:46.455031399Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:49.461331267Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:50.462893886Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:50.770079979Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:38:50.770207617Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:38:53.467943346Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:54.469203477Z][init][I] eth1: DHCPv4
+[2024-03-24T09:38:57.478184856Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:38:58.478965355Z][init][I] eth1: DHCPv4
+[2024-03-24T09:39:00.772829512Z][init][W] still waiting for disk to be ready after 10s
+[2024-03-24T09:39:00.772922282Z][init][W] still waiting for services to be ready after 10s
+[2024-03-24T09:39:01.488783508Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:39:02.489055203Z][init][I] eth1: DHCPv4
+[2024-03-24T09:39:03.001529447Z][init.disk][I] initial fsck successful in 1m55.714729935s
+[2024-03-24T09:39:03.001736375Z][init.disk][I] No free space on device to extend partition
+[2024-03-24T09:39:04.946060189Z][init][I] disk is ready
+[2024-03-24T09:39:05.019761138Z][init][I] services is ready
+[2024-03-24T09:39:05.020047146Z][init][I] Ran init in 2m12.828290547s
+[2024-03-24T09:39:05.049957606Z][init.disk][I] swap file has correct size 1073741824 and is not sparse
+[2024-03-24T09:39:05.498090374Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:39:06.500214168Z][init][I] eth1: DHCPv4
+[2024-03-24T09:39:09.507171495Z][init][I] eth1: DHCPv4 failure: timed out while listening for replies
+[2024-03-24T09:39:10.508154976Z][init][I] eth1: DHCPv4
+[2024-03-24T09:39:10.684446675Z][init][I] eth1: dhcp[0/4] = DHCPv4(xid=0x960a35a6 hwaddr=5a:8f:2b:2b:17:86 msg_type=DISCOVER, your_ip=0.0.0.0, server_ip=0.0.0.0)
+[2024-03-24T09:39:10.684593280Z][init][I] eth1: dhcp[1/4] = DHCPv4(xid=0x960a35a6 hwaddr=5a:8f:2b:2b:17:86 msg_type=OFFER, your_ip=192.168.64.2, server_ip=192.168.64.1)
+[2024-03-24T09:39:10.684720550Z][init][I] eth1: dhcp[2/4] = DHCPv4(xid=0x960a35a6 hwaddr=5a:8f:2b:2b:17:86 msg_type=REQUEST, your_ip=0.0.0.0, server_ip=0.0.0.0)
+[2024-03-24T09:39:10.685561225Z][init][I] eth1: dhcp[3/4] = DHCPv4(xid=0x960a35a6 hwaddr=5a:8f:2b:2b:17:86 msg_type=ACK, your_ip=192.168.64.2, server_ip=192.168.64.1)
+[2024-03-24T09:39:10.685804565Z][init][I] eth1: adding IP 192.168.64.2/24
+[2024-03-24T09:39:10.686156597Z][init][I] eth1: adding router 192.168.64.1
+[2024-03-24T09:39:10.686285264Z][init][I] eth1: adding default route via 192.168.64.1
+[2024-03-24T09:39:10.686470362Z][init][I] eth1: DHCPv4 IP is valid for 24h0m0s
+[2024-03-24T09:39:15.021269010Z][init][I] Couldn't start containerd services creating containerd client: failed to dial "/run/containerd/containerd.sock": context deadline exceeded: connection error: desc = "transport: error while dialing: dial unix:///run/containerd/containerd.sock: timeout"
+[2024-03-24T09:40:04.611038291Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:40:23.777996667Z][init.ipc][I] (733205ef) 4f2b9572-dns-forwarder S<-C bd6eb1d6-dns-forwarder POST /refresh
+[2024-03-24T09:40:23.779928959Z][init.ipc][I] ipc.NewClient: 417085f4-dns-forwarder ->  
+[2024-03-24T09:40:23.780410086Z][init.ipc][I] (34f935aa) 417085f4-dns-forwarder C->S  GET /registry/access
+[2024-03-24T09:40:23.782329818Z][init.ipc][I] (34f935aa) 417085f4-dns-forwarder C<-S 530435de-BackendAPI GET /registry/access (1.831415ms): {"allowed":[{"DNS":"","IP":{"IP":"0.0.0.0","Mask":"AAAAAA=="},"Type":1,"value":"0.0.0.0/0"},{"DNS":".","IP":{"IP":"","Mask":null},"Type":3,"value":"."},{"DNS":"","IP":{"IP":"10.0.0.0","Mask":"/wAAAA=="},"Type":1,"value":"10.0.0.0/8"},{"DNS":"","IP":{"IP":"172.16.0.0","Mask":"//AAAA=="},"Type":1,"value":"172.16.0.0/12"},{"DNS":"","IP":{"IP":"192.168.0.0","Mask":"//8AAA=="},"Type":1,"value":"192.168.0.0/16"},{"DNS":"","IP":{"IP":"127.0.0.0","Mask":"/wAAAA=="},"Type":1,"value":"127.0.0.0/8"}],"enabled":false,"refresh_after":"0001-01-01T00:00:00Z","refresh_grace_period_ends":"0001-01-01T00:00:00Z","refresh_grace_period_interval":0}
+[2024-03-24T09:40:23.782830105Z][init.ipc][I] (733205ef) 4f2b9572-dns-forwarder S->C bd6eb1d6-dns-forwarder POST /refresh (4.860214ms): OK
+[2024-03-24T09:42:02.137187194Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.137627882Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.137667419Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.137675376Z][init.socketforward][W] engine: /run/guest-services/dns-forwarder.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.137675396Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.137679335Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.138984840Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:42:02.138985167Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:42:02.139159992Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:42:02.139050697Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:42:02.139125298Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:42:02.148511796Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.148517870Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.149055876Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:42:02.149838030Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:42:02.150407052Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:45:04.613593465Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T09:45:12.863970946Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:02.140329118Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:02.140338602Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:02.140362231Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:02.140466061Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:02.140592188Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:02.150500149Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:02.150968608Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:47:03.890943446Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:03.890950227Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:03.890973868Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:03.890990027Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:03.891026637Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:03.891036286Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:47:06.968167187Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:49:15.125754620Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:50:12.867840519Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T09:50:13.045191990Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:52:03.891274632Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:03.891399265Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:03.891410161Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:03.891482368Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:03.891494084Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:03.892437310Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:04.112315374Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:52:05.583466741Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:52:05.583466764Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:52:05.857031714Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:52:06.774604157Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:52:06.972929638Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:52:09.273127541Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:54:15.128675134Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:54:15.556205613Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:55:13.047719088Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T09:55:20.015202934Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:57:04.113263853Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:57:05.585280531Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:57:05.585288442Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:57:05.857341962Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:57:06.775328371Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:57:06.997638661Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:57:07.647468911Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:57:08.041099288Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:57:08.041206324Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:57:08.041207074Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:57:09.275407997Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:57:09.436017537Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T09:59:15.559599781Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T09:59:17.533970705Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:00:19.954137265Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:00:20.017642895Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:06.999644008Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:07.379928397Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:02:07.648458742Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:08.041528318Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:08.041992372Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:08.045303044Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:08.157699209Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:02:08.157777198Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:02:08.371417538Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:02:09.437331702Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:02:10.017022509Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:02:10.258679984Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:04:17.535949766Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:05:19.912921158Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:05:19.954495601Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:07.380710924Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:08.158413083Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:08.158426286Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:08.373912366Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:10.017620119Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:10.259601686Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:07:26.201577322Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:07:26.204782810Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:07:26.204943106Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:07:26.204823550Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:07:26.204892652Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:07:45.152688120Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:10:19.914650220Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:11:10.865540845Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:12:26.203353081Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:12:26.206584333Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:12:26.207183250Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:12:26.207218512Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:12:26.207244555Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:12:45.154905436Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:12:56.203028349Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:12:56.203071058Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:12:56.203087263Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:12:56.203128773Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:12:56.203156598Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:13:55.732112249Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:16:10.867292982Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:16:26.596182957Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:17:56.204498230Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:17:56.204741888Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:17:56.204968555Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:17:56.204821715Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:17:56.204790846Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:18:09.385496297Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:18:09.385496276Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:18:09.385525021Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:18:09.385561438Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:18:09.385594026Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:18:55.733499338Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:19:11.920297410Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:21:26.598519651Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:21:33.497344189Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:23:09.386579597Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:23:09.386980773Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:23:09.386763224Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:23:09.386795777Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:23:09.386807870Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:23:15.857676192Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:23:15.861770165Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:23:15.861792707Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:23:15.863363480Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:23:17.632678102Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:24:11.921295777Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:25:31.768800151Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:26:33.498475635Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:27:00.005189364Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:28:15.858590193Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:28:15.862813578Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:28:15.862833569Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:28:15.863690319Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:28:17.633722480Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:28:31.219640532Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:28:31.219652856Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:28:31.219659923Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:28:31.219714834Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:28:31.221061080Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:30:31.769189139Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:30:33.163766819Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:30:57.602212946Z][init.socketforward][W] engine: /run/guest-services/otel-public.otlp.grpc.sock: cannot dial dial unix /run/guest-services/otel-public.otlp.grpc.sock: connect: no such file or directory
+[2024-03-24T10:30:58.604525109Z][init.socketforward][W] engine: /run/guest-services/otel-public.otlp.grpc.sock: cannot dial dial unix /run/guest-services/otel-public.otlp.grpc.sock: connect: no such file or directory
+[2024-03-24T10:31:59.770068655Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:32:00.007380035Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:33:31.221191154Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:33:31.221225830Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:33:31.221251232Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:33:31.221258890Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:33:31.221275705Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:33:31.223241356Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:33:31.238498539Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:33:31.238708553Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:33:31.994468622Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:33:32.223947166Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:35:33.165265816Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:35:44.178320859Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:36:59.770465875Z][init.socketforward][W] engine: /run/guest-services/lifecycle-server.sock: cannot dial context deadline exceeded
+[2024-03-24T10:37:00.632138630Z][init.socketforward][I] engine: /run/guest-services/lifecycle-server.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:38:31.225239872Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:38:31.240218808Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:38:31.240332416Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:38:31.995236395Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:38:32.224382202Z][init.socketforward][W] engine: /run/guest-services/docker.proxy.sock: cannot dial context deadline exceeded
+[2024-03-24T10:38:57.738919277Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:38:57.738954331Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:38:57.738989581Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:38:57.739034242Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[2024-03-24T10:38:57.739037620Z][init.socketforward][I] engine: /run/guest-services/docker.proxy.sock: does not exist yet, waiting for it to be created
+[36mINFO[0m[3734] disconnected data connection: multiplexer is offline 
