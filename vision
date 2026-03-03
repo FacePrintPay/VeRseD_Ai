@@ -1,0 +1,73 @@
+# 📁 Create project root
+mkdir -p ~/aimetaverse-demo/{css,js,assets}
+cd ~/aimetaverse-demo
+
+# 📄 index.html - Investor Demo Landing Page
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-Metaverse | Constellation-25 Demo</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>🌐 AI-Metaverse</h1>
+    <p>Sovereign Agent Framework • FacePrint Auth • Live Demo</p>
+    <button id="biometric-auth">🔐 Authenticate with FacePrint</button>
+    <div id="agent-status">⏳ Loading Constellation-25 Agents...</div>
+  </header>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/demo-agent.js"></script>
+</body>
+</html>
+EOF
+
+# 🎨 css/main.css - Minimal Styling
+cat > css/main.css << 'EOF'
+body { font-family: system-ui; background: #0f0f1a; color: #fff; margin: 0; padding: 2rem; }
+.hero { text-align: center; padding: 3rem 1rem; }
+#biometric-auth { 
+  background: linear-gradient(135deg, #6366f1, #8b5cf6); 
+  border: none; padding: 1rem 2rem; color: white; 
+  border-radius: 12px; font-weight: 600; cursor: pointer; 
+  margin: 1rem 0;
+}
+#agent-status { margin-top: 1rem; font-family: monospace; }
+EOF
+
+# 🤖 js/demo-agent.js - Mock Constellation-25 Agent Hook
+cat > js/demo-agent.js << 'EOF'
+// Constellation-25 Agent Demo Hook (Termux-Compatible)
+document.addEventListener('DOMContentLoaded', () => {
+  const status = document.getElementById('agent-status');
+  const authBtn = document.getElementById('biometric-auth');
+  
+  // Simulate agent bootstrap
+  setTimeout(() => {
+    status.innerHTML = '✅ 25/25 Agents Online • Pathos-Sovereign-1 Active';
+    status.style.color = '#22c55e';
+  }, 1500);
+
+  // Biometric auth mock (replace with real FacePrintPay SDK later)
+  authBtn.addEventListener('click', () => {
+    authBtn.disabled = true;
+    authBtn.textContent = '🔐 Verifying Biometric Signature...';
+    setTimeout(() => {
+      authBtn.textContent = '✅ Identity Confirmed • Access Granted';
+      authBtn.style.background = '#22c55e';
+      // Trigger agent activation event
+      window.dispatchEvent(new CustomEvent('constellation:authenticated'));
+    }, 2000);
+  });
+});
+EOF
+
+# 📦 Add GSAP for animations (lightweight CDN fallback for demo)
+curl -s https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js -o js/gsap.min.js
+
+echo "✅ Demo scaffold ready in ~/aimetaverse-demo"
+echo "▶️ Run with: cd ~/aimetaverse-demo && python3 -m http.server 8080"
