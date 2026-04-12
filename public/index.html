@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>🌌 AiMetaverse • Builder Platform</title><style>
+:root{--bg:#0a0a15;--panel:#16162a;--accent:#7c3aed;--text:#e6e6ff;--success:#22c55e;--warn:#f59e0b}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{padding:1rem 2rem;border-bottom:1px solid #333;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg);z-index:10}
+.logo{font-weight:800;font-size:1.3rem;background:linear-gradient(135deg,var(--accent),#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.tab{padding:.5rem 1rem;background:var(--panel);border:1px solid #333;color:var(--text);border-radius:8px;cursor:pointer;font-size:.9rem;transition:.2s}
+.tab:hover{border-color:var(--accent)}.tab.active{background:var(--accent);border-color:var(--accent)}
+main{padding:1.5rem 2rem;max-width:1400px;margin:0 auto}.panel{display:none}.panel.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--panel);border:1px solid #333;border-radius:12px;padding:1rem;cursor:pointer;transition:.2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}.card.active{border-color:var(--accent);background:#252540}
+.card h3{font-weight:600;margin-bottom:.25rem}.status{font-size:.75rem;padding:3px 8px;border-radius:999px;background:#333}
+.status.active{background:var(--success);color:#052e16}.status.idle{background:#444;color:#aaa}
+.prompt{width:100%;min-height:140px;background:#0f0f23;border:1px solid #333;border-radius:10px;padding:1rem;color:var(--text);resize:vertical;font-family:inherit}
+.btn{background:var(--accent);color:white;border:none;padding:.8rem 1.5rem;border-radius:10px;cursor:pointer;font-weight:600;transition:.2s}
+.btn:hover{filter:brightness(1.1)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.output{background:#0f0f23;border-radius:10px;padding:1rem;margin-top:1rem;min-height:120px;white-space:pre-wrap;font-family:monospace;font-size:.9rem;max-height:400px;overflow:auto}
+.avatar{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#3b82f6);margin:1rem auto;display:grid;place-items:center;font-size:3rem}
+.deploy-log{background:#0f0f23;border-radius:10px;padding:1rem;font-family:monospace;font-size:.85rem;max-height:350px;overflow:auto}
+.repo-tree{font-family:monospace;font-size:.85rem;max-height:500px;overflow:auto}
+@media(max-width:768px){header{padding:1rem}.tabs{overflow-x:auto;white-space:nowrap}main{padding:1rem}}
+</style></head><body>
+<header>
+  <div class="logo">🌌 AiMetaverse Builder</div>
+  <nav class="tabs">
+    <button class="tab active" data-tab="agents">🪐 Agents</button>
+    <button class="tab" data-tab="studio">✍️ Prompt Studio</button>
+    <button class="tab" data-tab="avatar">👤 Avatar Lab</button>
+    <button class="tab" data-tab="deploy">🚀 Deploy</button>
+    <button class="tab" data-tab="repo">📁 Repos</button>
+  </nav>
+</header>
+<main>
+  <section id="agents" class="panel active">
+    <h2>Planetary AI Agents</h2>
+    <p id="agent-summary" style="color:#888;margin:.5rem 0">Loading...</p>
+    <div class="grid" id="agent-grid"></div>
+  </section>
+  <section id="studio" class="panel">
+    <h2>Prompt Studio</h2>
+    <select id="studio-agent" class="prompt" style="height:auto"><option>Select agent...</option></select>
+    <textarea id="studio-prompt" class="prompt" placeholder="Describe what you want to create..."></textarea>
+    <button id="studio-run" class="btn">✨ Generate</button>
+    <div id="studio-output" class="output"></div>
+  </section>
+  <section id="avatar" class="panel">
+    <h2>Avatar Lab</h2>
+    <div class="avatar">👁️</div>
+    <input type="file" id="voice-upload" accept="audio/*" style="display:none"/>
+    <button class="btn" onclick="document.getElementById('voice-upload').click()">🎤 Upload Voice Sample</button>
+    <input type="text" id="birth-chart" placeholder="Birth chart (optional)" style="width:100%;padding:.8rem;margin:1rem 0;border-radius:8px;border:1px solid #333;background:#0f0f23;color:var(--text)"/>
+    <textarea id="avatar-prompt" class="prompt" placeholder="Describe your avatar's personality, style, purpose..."></textarea>
+    <button class="btn">🎨 Create Avatar</button>
+    <div id="avatar-output" class="output"></div>
+  </section>
+  <section id="deploy" class="panel">
+    <h2>Deploy Your Creation</h2>
+    <p style="color:#888;margin:.5rem 0">One-click deploy to Vercel, GitHub Pages, or export locally.</p>
+    <select id="deploy-target" style="width:100%;padding:.8rem;margin:1rem 0;border-radius:8px;border:1px solid #333;background:#0f0f23;color:var(--text)">
+      <option value="vercel">Vercel (Recommended)</option>
+      <option value="github">GitHub Pages</option>
+      <option value="local">Local Export (ZIP)</option>
+    </select>
+    <button id="deploy-run" class="btn">🌐 Deploy Now</button>
+    <div id="deploy-log" class="deploy-log">Waiting for deploy command...</div>
+  </section>
+  <section id="repo" class="panel">
+    <h2>Repository Explorer</h2>
+    <div id="repo-tree" class="repo-tree">Scanning repositories...</div>
+  </section>
+</main>
+<script>
+// Tab switching
+document.querySelectorAll('.tab').forEach(t=>t.onclick=e=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  e.currentTarget.classList.add('active');
+  document.getElementById(e.currentTarget.dataset.tab).classList.add('active');
+});
+// Load agents from reports
+async function loadAgents(){
+  try{
+    const res=await fetch('agentlogs/data.json');
+    const data=await res.json();
+    const agents=data.agents||[];
+    document.getElementById('agent-summary').textContent=`${agents.filter(a=>a.has_log).length}/${agents.length} agents active • Last sync: ${data.updated_at?new Date(data.updated_at).toLocaleString():'—'}`;
+    document.getElementById('agent-grid').innerHTML=agents.map(a=>`<div class="card" data-agent="${a.agent}" onclick="selectAgent('${a.agent}')"><h3>${a.agent}</h3><span class="status ${a.has_log?'active':'idle'}">${a.has_log?'✅ Ready':'⏳ Idle'}</span></div>`).join('');
+    const sel=document.getElementById('studio-agent');
+    sel.innerHTML='<option>Select agent...</option>'+agents.map(a=>`<option value="${a.agent}">${a.agent}</option>`).join('');
+  }catch{document.getElementById('agent-summary').textContent='⚠️ Run agents first to generate reports';}
+}
+function selectAgent(name){document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));document.querySelector(`[data-agent="${name}"]`)?.classList.add('active');document.getElementById('studio-agent').value=name;}
+// Prompt execution
+document.getElementById('studio-run').onclick=async()=>{
+  const agent=document.getElementById('studio-agent').value,prompt=document.getElementById('studio-prompt').value,out=document.getElementById('studio-output');
+  if(!agent||!prompt){out.textContent='⚠️ Select agent and enter prompt';return;}
+  out.textContent='🔄 Generating...';
+  try{const res=await fetch('/api/agent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agent,prompt})});if(res.ok){const r=await res.json();out.textContent=r.output||JSON.stringify(r,null,2);}else{out.textContent=`✅ [Simulated] ${agent} processed:\n"${prompt}"\n\n[Backend not connected — agents run locally in Termux]`;} }catch{out.textContent=`✅ [Offline Mode] ${agent} would process:\n"${prompt}"\n\n[Deploy backend for live execution]`;}
+};
+// Deploy simulation
+document.getElementById('deploy-run').onclick=()=>{
+  const log=document.getElementById('deploy-log'),target=document.getElementById('deploy-target').value;
+  log.textContent='🔄 Preparing build...';
+  setTimeout(()=>log.textContent+=`\n✅ Build completed`,800);
+  setTimeout(()=>log.textContent+=`\n🌐 Deploying to ${target}...`,1600);
+  setTimeout(()=>{const url=target==='vercel'?'https://your-project.vercel.app':target==='github'?'https://username.github.io/repo':'./export';log.textContent+=`\n✨ Deployed! Visit: ${url}\n\n[Simulation — wire to your deploy script for real execution]`},2400);
+};
+// Repo tree (simulated)
+document.getElementById('repo-tree').textContent=`[Simulated repo tree]\n• VeRseD_Ai/\n  ├─ tasks/ (25 agent scripts)\n  ├─ agents/ (export utilities)\n  ├─ public/ (static frontend)\n  └─ reports/ (JSON outputs)\n\n[Full scan requires backend integration]`;
+// Init
+document.addEventListener('DOMContentLoaded',loadAgents);
+</script></body></html>
