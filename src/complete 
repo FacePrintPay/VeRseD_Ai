@@ -1,0 +1,22 @@
+
+echo ""
+echo "🎉 PERMANENT FIX APPLIED"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "📍 Target path: $TARGET_PATH"
+echo "🔗 Points to: $(readlink -f "$TARGET_PATH" 2>/dev/null || echo 'copied file')"
+echo "✅ Executable: $([ -x "$TARGET_PATH" ] && echo 'YES' || echo 'NO')"
+echo "🧪 Test result: $(timeout 2 "$TARGET_PATH" --help >/dev/null 2>&1 && echo 'PASS' || echo 'CHECK LOGS')"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+echo "💡 TermuxService will now find and execute stalker_global.sh"
+echo "💡 Re-trigger your task/widget to confirm"
+🔍 Locating REAL stalker_global.sh...
+✅ Found canonical source: /data/data/com.termux/files/home/constellation25-mono/constellation25/stalker_global.sh
+🔗 Creating symlink at: /data/data/com.termux/files/home/constellation25/stalker_global.sh
+✅ Symlink created
+🧪 Testing execution...
+⚠️  Script exists but may have runtime errors (check logs)
+🔧 Updating Termux task configs...
+bash: syntax error near unexpected token `2'
+
+[Process completed (code 2) - press Enter]
